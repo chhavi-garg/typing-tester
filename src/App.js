@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./App.css";
+import Landing from './Components/Landing';
 import NavBar from './Components/NavBar';
 
 export default class App extends Component {
@@ -9,8 +10,10 @@ export default class App extends Component {
         <div className="app">
           {/* Nav Section */}
           <NavBar />
-          {/* Landing Page */}
 
+          {/* Landing Page */}
+          <Landing />
+          
           {/* Challenge Section */}
 
           {/* Footer */}
