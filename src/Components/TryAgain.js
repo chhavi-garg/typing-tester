@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function TryAgain({words,characters,wpm}) {
   return (
-    <div className="try-again-container">
+    <div data-aos="fade-up" className="try-again-container">
         <h1>Test Results</h1>
 
         <div className="results-container">
