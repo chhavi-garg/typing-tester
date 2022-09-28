@@ -9,7 +9,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/chhavigarg7/"
                 rel="noreferrer"
             >
-                Learnig React  |  Chhavi Garg
+                Learning React  |  Chhavi Garg
             </a>
         </div>
   )

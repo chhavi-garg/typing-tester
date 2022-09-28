@@ -1,53 +1,46 @@
-body{
-  margin : 0;
+body {
+  margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
-.app
-{
-  display :flex;
+.app {
+  display: flex;
   flex-direction: column;
   background-color: #262a2b;
 }
 
 /* NAVBAR  */
-.nav-container
-{
-  display:flex;
+.nav-container {
+  display: flex;
   justify-content: space-between;
-  height:72px;
+  height: 72px;
   align-items: center;
   background: #1d2020;
   margin: 0;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   z-index: 99;
 }
-.nav-left
-{
+.nav-left {
   display: flex;
   align-items: center;
 }
-.nav-right
-{
+.nav-right {
   margin-right: 20px;
 }
-.flash-logo
-{
+.flash-logo {
   margin-left: 16px;
   height: 40px;
 }
 
-.flash-logo-text
-{
+.flash-logo-text {
   font-family: "Bangers", cursive;
   font-size: 40px;
   letter-spacing: 1px;
   margin: 0 10px;
   color: #e7e6e7;
 }
-.nav-link
-{
+.nav-link {
   font-family: "Poppins", sans-serif;
   font-size: 32px;
   color: #e7e6e7;
@@ -85,21 +78,21 @@ body{
 
 @media (max-width: 800px) {
   .landing-container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .flash-image {
-      width: 80vw;
+    width: 80vw;
   }
 
   .landing-header {
-      margin-top: 32px;
-      text-align: center;
+    margin-top: 32px;
+    text-align: center;
   }
 
   .typewriter-container {
-      text-align: center;
+    text-align: center;
   }
 }
 
@@ -153,7 +146,7 @@ body{
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.typing-challenge-container {
+.typing-challenge-cont {
   display: flex;
   flex-grow: 1;
 }
@@ -196,8 +189,8 @@ body{
   vertical-align: middle;
   text-align: center;
   color: #fff;
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
-      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
   font-size: 18px;
   font-weight: 500;
   line-height: 36px;
@@ -248,6 +241,114 @@ body{
   flex-grow: 1;
 }
 
-/* Challenge Section */
-
 /* Challenge Details */
+
+.details-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.details-card-container > p {
+  margin: 0;
+}
+
+.details-card-container:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-name {
+  font-size: 15px;
+  /* padding-top: 16px; */
+  margin-bottom: -15px !important;
+}
+
+.card-value {
+  font-size: 50px;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* Typing Challenge */
+
+.typing-challenge {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-container {
+  margin: 16px;
+  /* margin-bottom: 0; */
+}
+
+.timer {
+  font-size: 38px;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.timer-info {
+  margin: 0;
+  margin-top: -5px;
+  color: #dd5044;
+  font-size: 20px;
+  text-align: center;
+}
+
+.textarea-container {
+  margin: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  width: 80%;
+}
+
+.textarea-left,
+.textarea-right {
+  display: flex;
+  width: 50%;
+  flex-grow: 1;
+}
+
+.textarea {
+  text-align: left;
+  flex-grow: 1;
+  height: 400px;
+  width: 100%;
+  padding: 10px;
+  line-height: 18px;
+  flex-wrap: wrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: scroll;
+}
+
+.textarea:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.textarea {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.test-paragraph {
+  font-size: 12px;
+  background: #e9e7e4;
+  padding: 12px;
+  /* display: flex;
+  flex-direction: row; */
+}
