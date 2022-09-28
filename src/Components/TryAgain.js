@@ -27,7 +27,7 @@ export default function TryAgain({words,characters,wpm}) {
                             "facebook-share-dialog",
                             "width=800,height=600")}>
                     Share
-                </button>
+                </button> 
 
                 <button className="end-buttons tweet-btn"
                     onClick={() =>
