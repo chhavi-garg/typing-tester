@@ -2,7 +2,7 @@ import React from 'react'
 import TryAgain from './TryAgain'
 import TypingChallengeContainer from './TypingChallengeContainer'
 
-export default function TestContainer({selectedParagraph, words,characters,wpm,timeRemaining,timerStarted,testInfo,onInputChange}) 
+export default function TestContainer({selectedParagraph, words,characters,wpm,timeRemaining,timerStarted,testInfo,onInputChange,startAgain}) 
 {
   return (
 
@@ -27,6 +27,7 @@ export default function TestContainer({selectedParagraph, words,characters,wpm,t
                         words={words}
                         characters={characters}
                         wpm={wpm}
+                        startAgain={startAgain }
                     />
                 </div>
             )}
