@@ -4,7 +4,7 @@ import ChallengeSection from './Components/ChallengeSection';
 import Footer from './Components/Footer';
 import Landing from './Components/Landing';
 import NavBar from './Components/NavBar';
-
+import {SAMPLE_PARAGRAPHS} from './sampleParagraph';
 const totalTime = 60;
 const serviceUrl = "http://metaphorpsum.com/paragraphs/2/10";
 
@@ -53,7 +53,7 @@ export default class App extends Component {
           this.setState({...DefaultState,testInfo : testInfo, selectedParagraph : data});
         });
   }
-  
+
   componentDidMount()
   {
     this.fetchNewParagraph();
