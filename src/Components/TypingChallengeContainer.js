@@ -2,7 +2,7 @@ import React from 'react'
 import ChallengeDetails from './ChallengeDetails'
 import TypingChallenge from './TypingChallenge'
 
-export default function TypingChallengeContainer({selectedParagraph, words,characters,wpm,timeRemaining,timerStarted,testInfo}) {
+export default function TypingChallengeContainer({selectedParagraph, words,characters,wpm,timeRemaining,timerStarted,testInfo,onInputChange}) {
   return (
    <div className="typing-challenge-container">
         {/* Details */}
@@ -24,7 +24,8 @@ export default function TypingChallengeContainer({selectedParagraph, words,chara
             timerStarted ={timerStarted}
             timeRemaining={timeRemaining}
             selectedParagraph={selectedParagraph}
-            testInfo={testInfo} />
+            testInfo={testInfo}
+            onInputChange={onInputChange} />
 
         </div>
    </div>

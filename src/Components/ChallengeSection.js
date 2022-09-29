@@ -1,7 +1,7 @@
 import React from 'react'
 import TestContainer from './TestContainer'
 
-export default function ChallengeSection({selectedParagraph, words,characters,wpm,timeRemaining,timerStarted,testInfo}) {
+export default function ChallengeSection({selectedParagraph, words,characters,wpm,timeRemaining,timerStarted,testInfo, onInputChange}) {
   return (
     <div className="challenge-section-container">
         <h1 data-aos="fade-down" className="challenge-section-header">
@@ -14,7 +14,8 @@ export default function ChallengeSection({selectedParagraph, words,characters,wp
           timeRemaining={timeRemaining} 
           timerStarted={timerStarted}
           selectedParagraph = {selectedParagraph}
-          testInfo={testInfo} />
+          testInfo={testInfo}
+          onInputChange ={onInputChange} />
     </div>
   )
 }
