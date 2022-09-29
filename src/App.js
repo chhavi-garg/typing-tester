@@ -33,6 +33,29 @@ export default class App extends Component {
 
   state = DefaultState;
 
+  fetchNewParagraphFallback = () => {
+    const data =
+        SAMPLE_PARAGRAPHS[
+            Math.floor(Math.random() * SAMPLE_PARAGRAPHS.length)
+        ];
+
+    const selectedParagraphArray = data.split("");
+    const testInfo = selectedParagraphArray.map((selectedLetter) => {
+        return {
+            testLetter: selectedLetter,
+            status: "notAttempted",
+        };
+    });
+
+    // Update the testInfo in state
+    this.setState({
+        ...DefaultState,
+        selectedParagraph: data,
+        testInfo,
+    });
+};
+
+
   fetchNewParagraph = () =>{
     fetch(serviceUrl)
         .then((response) => response.text())
@@ -56,7 +79,7 @@ export default class App extends Component {
 
   componentDidMount()
   {
-    this.fetchNewParagraph();
+    this.fetchNewParagraphFallback();
     // fetch(serviceUrl)
     //   .then((response) => response.text())
     //   .then((data) =>{
@@ -103,7 +126,7 @@ export default class App extends Component {
   }; 
 
   // startAgain = () => alert("I am starting again !");
-  startAgain = () => this.fetchNewParagraph();
+  startAgain = () => this.fetchNewParagraphFallback();
   handleUserInput =(inputValue)=>
   {
     // console.log(inputValue);
