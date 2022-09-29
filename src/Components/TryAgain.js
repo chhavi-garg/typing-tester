@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TryAgain({words,characters,wpm}) {
+export default function TryAgain({words,characters,wpm,startAgain}) {
   return (
     <div data-aos="fade-up" className="try-again-container">
         <h1>Test Results</h1>
@@ -17,7 +17,7 @@ export default function TryAgain({words,characters,wpm}) {
             </p>
         </div>
         <div>
-                <button className="end-buttons start-again-btn">
+                <button onClick={()=> startAgain()} className="end-buttons start-again-btn">
                         Re-try
                 </button>
 
