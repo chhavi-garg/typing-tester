@@ -126,7 +126,7 @@ export default class App extends Component {
   }; 
 
   // startAgain = () => alert("I am starting again !");
-  startAgain = () => this.fetchNewParagraphFallback();
+  startAgain = () => {this.fetchNewParagraphFallback();}
   handleUserInput =(inputValue)=>
   {
     // console.log(inputValue);
@@ -158,7 +158,7 @@ export default class App extends Component {
         testInfo : [
           {
             testLetter : this.state.testInfo[0].testLetter,
-            status : "notAttempted"
+            status : "notAttempted",
           },
           ...this.state.testInfo.slice(1),
         ],
@@ -179,7 +179,7 @@ export default class App extends Component {
     // Making a copy of test info
 
     const testInfo = this.state.testInfo;
-    if(!index===this.state.selectedParagraph.length -1)
+    if(!(index===this.state.selectedParagraph.length -1))
     {
       testInfo[index + 1].status = "notAttempted";
     }
